@@ -27,5 +27,6 @@ Route::post('/send_data', function (Request $request) {
 
   $latestButtonState = Button::latest()->first();
 
-  return response()->json([$latestButtonState->red, $latestButtonState->yellow, $latestButtonState->green]);
+  $response = $latestButtonState->red . ',' . $latestButtonState->yellow . ',' . $latestButtonState->green;
+  return $response;
 });
