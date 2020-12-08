@@ -24,8 +24,8 @@
 
             $('.btn').click(function (e) {
               var now = new Date();
-              now.setSeconds(now.getSeconds() + 10); // timestamp
-              now = new Date(now); // Date object
+              now.setSeconds(now.getSeconds() + 10);
+              now = new Date(now);
               const countdownToTime =
               `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()} ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
 
