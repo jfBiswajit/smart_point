@@ -32,6 +32,9 @@
                 $('#clock').countdown(countdownToTime, function (event) {
                     var totalHours = event.offset.totalDays * 24 + event.offset.hours;
                     $(this).html(event.strftime(totalHours + ' hr %M min %S sec'));
+                    if (event.type === 'finish') {
+                      console.log(154);
+                    }
                 });
             });
         });
