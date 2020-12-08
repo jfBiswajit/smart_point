@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Button;
 use App\Models\Test;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -23,5 +24,8 @@ Route::post('/send_data', function (Request $request) {
   $test = new Test();
   $test->val = $request->data;
   $test->save();
-  return 'success';
+
+  $latestButtonState = Button::latest()->first();
+
+  return response()->json([$latestButtonState->red, $latestButtonState->yellow, $latestButtonState->green]);
 });
