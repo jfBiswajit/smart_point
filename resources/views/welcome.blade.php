@@ -10,12 +10,16 @@
 
 <body>
     <h1 id="show">0.00</h1>
-    <button name="red" value="" style="background: red">10 Mins</button>
-    <button name="yellow" value="" style="background: yellow">10 Mins</button>
-    <button name="green" value="" style="background: green">10 Mins</button>
+    <button id="red" name="red" value="" style="background: red">10 Mins</button>
+    <button id="yellow" name="yellow" value="" style="background: yellow">10 Mins</button>
+    <button id="green" name="green" value="" style="background: green">10 Mins</button>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script>
+      const red = $('#red').val();
+      const yellow = $('#yellow').val();
+      const green = $('#green').val();
+
         setInterval(function () {
           $h1 = $('#show');
             $.ajax({
