@@ -20,9 +20,13 @@ Route::get('/', function () {
   return view('welcome');
 });
 
-// Route::post('/show_data', function () {
-//   return response()->json(Test::latest()->first());
-// });
+Route::post('/show_data', function () {
+  return response()->json(Test::latest()->first());
+});
+
+Route::get('/show_data', function () {
+  return view('live');
+});
 
 Route::post('/store_button_data', function (Request $request) {
   $button = new Button();
@@ -34,5 +38,5 @@ Route::post('/store_button_data', function (Request $request) {
 
   $latestButtonState = Button::latest()->first();
 
-  return response()->json([$latestButtonState->red, $latestButtonState->yellow, $latestButtonState->green]);
+  return response()->json($latestButtonState->red, $latestButtonState->yellow, $latestButtonState->green);
 });

@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <a href="{{ url('show_data') }}">Live Data</a>
     <div style="padding: 1rem">
         <button id="red" class="btn" name="red" value="0" style="background: red">10 Mins</button>
         <span id="red_clock" style="color: red; font-size: 1.2rem">0 hr 00 min 00 sec</span>
