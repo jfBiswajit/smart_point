@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Test;
 use Illuminate\Http\Client\Request;
 use Illuminate\Http\Request as HttpRequest;
 use Illuminate\Support\Facades\Route;
@@ -15,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/send_dat', function(HttpRequest $request) {
-  dd($request);
+Route::get('/', function() {
+  return view('welcome');
+});
+
+Route::post('/show_data', function () {
+  return response()->json(Test::latest()->first());
 });
