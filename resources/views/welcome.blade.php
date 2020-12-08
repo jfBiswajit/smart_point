@@ -9,31 +9,32 @@
 </head>
 
 <body>
-    <h1 id="show">0.00</h1>
-    <button id="red" name="red" value="" style="background: red">10 Mins</button>
-    <button id="yellow" name="yellow" value="" style="background: yellow">10 Mins</button>
-    <button id="green" name="green" value="" style="background: green">10 Mins</button>
+    <h2 id="clock">0 hr 00 min 00 sec</h2>
+    <button id="red" class="btn" name="red" value="" style="background: red">10 Mins</button>
+    <button id="yellow" class="btn" name="yellow" value="" style="background: yellow">10 Mins</button>
+    <button id="green" class="btn" name="green" value="" style="background: green">10 Mins</button>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/jquery.countdown.js') }}"></script>
     <script>
-      const red = $('#red').val();
-      const yellow = $('#yellow').val();
-      const green = $('#green').val();
+        $(function () {
+            const red = $('#red').val();
+            const yellow = $('#yellow').val();
+            const green = $('#green').val();
 
-        setInterval(function () {
-          $h1 = $('#show');
-            $.ajax({
-                url: "show_data",
-                method: "post",
-                data: {
-                    "_token": "{{ csrf_token() }}",
-                },
-                success: function (response) {
-                    $h1.html(response.val);
-                },
-                dataType: "json",
+            $('.btn').click(function (e) {
+              var now = new Date();
+              now.setSeconds(now.getSeconds() + 10); // timestamp
+              now = new Date(now); // Date object
+              const countdownToTime =
+              `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()} ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
+
+                $('#clock').countdown(countdownToTime, function (event) {
+                    var totalHours = event.offset.totalDays * 24 + event.offset.hours;
+                    $(this).html(event.strftime(totalHours + ' hr %M min %S sec'));
+                });
             });
-        }, 1000);
+        });
     </script>
 </body>
 
