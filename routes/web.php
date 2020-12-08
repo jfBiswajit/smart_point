@@ -20,6 +20,10 @@ Route::get('/', function() {
   return view('welcome');
 });
 
-Route::post('/show_data', function () {
+// Route::post('/show_data', function () {
+//   return response()->json(Test::latest()->first());
+// });
+
+Route::post('/store_button_data', function () {
   return response()->json(Test::latest()->first());
 });
