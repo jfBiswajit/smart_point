@@ -156,7 +156,9 @@
 
 
 
-            <button class="card"><h2>Press To Get water</h2></button>
+            <a href="get_your_water"><button class="card">
+                    <h2>Press To Get water</h2>
+                </button></a>
 
 
 
