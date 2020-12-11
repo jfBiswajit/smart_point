@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+  return $request->user();
 });
 
 Route::post('/send_data', function (Request $request) {
@@ -43,6 +43,8 @@ Route::post('/send_data', function (Request $request) {
 
       if ($validTime >= $now) {
         $phone = 1;
+      } else {
+        $transaction->delete();
       }
     }
 
@@ -53,23 +55,18 @@ Route::post('/send_data', function (Request $request) {
 
       if ($validTime >= $now) {
         $ev = 1;
+      } else {
+        $transaction->delete();
       }
     }
 
     if ($transaction->service_type == 3) {
-      $duration = $transaction->duration;
-      $validTime = ($transaction->created_at)->addSecond($duration);
-      $now = Carbon::now();
-
-      if ($validTime >= $now) {
-        $water = 1;
-      }
+      $water = 1;
+      $transaction->delete();
     }
   }
 
   $indicatorData = [$phone, $ev, $water];
 
   dd($indicatorData);
-
-  $transactions = Transaction::all();
 });
