@@ -22,6 +22,9 @@ Route::get('/', function () {
   return view('welcome');
 });
 
+Route::get('/dashboard', function () {
+    return view('/UserLayouts/dashboard');
+});
 Route::post('/show_data', function () {
   return response()->json(Test::latest()->first());
 });
