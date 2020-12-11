@@ -75,12 +75,14 @@ h2{position: center;
 
 
 
-        <label for="country">Duration</label>
-        <select id="country" name="duration">
-            <option value="5">5 Minuite</option>
-            <option value="10">10 Minuite</option>
-            <option value="15">15 Minuite</option>
-        </select>
+      @if ($id == 1 || $id == 2)
+          <label for="country">Duration</label>
+          <select id="country" name="duration">
+              <option value="5">5 Minuite</option>
+              <option value="10">10 Minuite</option>
+              <option value="15">15 Minuite</option>
+          </select>
+      @endif
 
         <label for="">Select Payment Method</label>
         <select id="" name="payment_method">

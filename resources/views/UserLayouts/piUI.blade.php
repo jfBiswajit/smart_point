@@ -101,7 +101,7 @@
 
             <div  class="card">
 
-                <a href="{{ url("/payment/{id}") }}"><img class='image' src="{{asset('assets/images/car.jpg')}}"></a>
+                <a href="payment/2"><img class='image' src="{{asset('assets/images/car.jpg')}}"></a>
                 <h2>Car Charge</h2>
             </div>
 
@@ -116,7 +116,7 @@
 
         <div class="card">
 
-            <a href="{{ url("/payment/{id}") }}"><img class='image' src="{{asset('assets/images/phone.jpg')}}"></a>
+            <a href="payment/1"><img class='image' src="{{asset('assets/images/phone.jpg')}}"></a>
            <h2>Mobile Charge</h2>
         </div>
 
@@ -131,7 +131,7 @@
 
         <div class="card">
 
-            <a href="{{ url("/payment/{id}") }}"><img class='image' src="{{asset('assets/images/water.jpg')}}"></a>
+            <a href="payment/3"><img class='image' src="{{asset('assets/images/water.jpg')}}"></a>
             <h2>Drinking Water</h2>
         </div>
 
