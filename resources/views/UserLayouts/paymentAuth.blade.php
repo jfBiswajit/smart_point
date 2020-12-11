@@ -119,8 +119,10 @@
                 $img = 'bkash.jpg';
                 } else if ($paymentMethod == 2) {
                 $img = 'rocket.jpg';
-                } else {
+                } else if ($paymentMethod == 3) {
                 $img = 'nogod.jpg';
+                } else {
+                $img = 'card.jpg';
                 }
                 @endphp
                 <img class='image' src="{{asset("assets/images/$img")}}">
