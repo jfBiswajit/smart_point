@@ -9,6 +9,7 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
+            background:white;
         }
         input[type=text], select {
             width: 100%;
@@ -27,11 +28,12 @@
             justify-content: center;
             flex-direction: row;
         }
-        .image{background-color: #999;
-            width: 200px;
-            height: 180px;
-            display: inline-block;
-            overflow: hidden;}
+        .image{
+
+                     width:400px;
+                     height: 100px;
+                     display: inline-block;
+                     overflow: hidden;}
         input[type=submit] {
             width: 100%;
             background-color: #4CAF50;
@@ -89,12 +91,24 @@
     </style>
 </head>
 <body>
+
 <div style="display: flex;
   justify-content: center;
-  flex-direction: row;" class="row">
-    <h2>Complete You Payment</h2>
+  flex-direction: row;" class="container">
+    <div class="">
+
+
+
+        <div class="card">
+
+            <img class='image' src="{{asset('assets/images/smartPoint.png')}}">
+        </div>
+
+    </div>
+
 
 </div>
+
 <div style="display: flex;
   justify-content: center;
   flex-direction: row;" class="row">
