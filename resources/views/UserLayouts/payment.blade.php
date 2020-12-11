@@ -49,24 +49,22 @@ h2{position: center;
 <div class="container">
     <form action="{{ url("/paymentAuth") }}">
         <label for="fname">Type Your Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+        <input type="text" id="fname" name="name" placeholder="Your full name.." required>
 
 
 
         <label for="country">Duration</label>
-        <select id="country" name="country">
-            <option value="">10 Minuite</option>
-            <option value="">20 Minuite</option>
-            <option value="">30 Minuite</option>
-            <option value="">1 Hour</option>
+        <select id="country" name="duration">
+            <option value="5">5 Minuite</option>
+            <option value="10">10 Minuite</option>
+            <option value="15">15 Minuite</option>
         </select>
 
         <label for="">Select Payment Method</label>
-        <select id="" name="country">
-            <option value="">Bkash</option>
-            <option value="">Rocket</option>
-            <option value="">Nogod</option>
-            <option value="">DBBL</option>
+        <select id="" name="payment_method">
+            <option value="1">Bkash</option>
+            <option value="2">Rocket</option>
+            <option value="3">Nogod</option>
         </select>
         <input type="submit" value="Submit">
     </form>
