@@ -87,6 +87,7 @@ h2{position: center;
             <option value="1">Bkash</option>
             <option value="2">Rocket</option>
             <option value="3">Nogod</option>
+            <option value="3">Card</option>
         </select>
         <input type="submit" value="Submit">
     </form>

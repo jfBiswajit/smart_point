@@ -25,6 +25,12 @@ Route::post('/show_data', function () {
   return response()->json(Test::latest()->first());
 });
 
+Route::get('/piUI', function () {
+    return view('/UserLayouts/piUI');
+});
+Route::get('/waterCounter', function () {
+    return view('/UserLayouts/waterCounter');
+});
 
 
 Route::get('/show_data', function () {
