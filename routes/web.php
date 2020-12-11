@@ -24,8 +24,20 @@ Route::post('/show_data', function () {
   return response()->json(Test::latest()->first());
 });
 
+
+
 Route::get('/show_data', function () {
   return view('live');
+});
+Route::get('/payment', function () {
+    return view('UserLayouts.payment');
+});
+
+Route::get('/paymentAuth', function () {
+    return view('UserLayouts.paymentAuth');
+});
+Route::get('/paymentRocket', function () {
+    return view('UserLayouts.paymentRocket');
 });
 
 Route::post('/store_button_data', function (Request $request) {
