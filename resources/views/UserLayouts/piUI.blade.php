@@ -11,15 +11,7 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        .fade
-        {
-            opacity:0.5;
-           margin-right:15px;
-        }
-        .fade:hover
-        {
-            opacity:1;
-        }
+
         .column {
             float: left;
             width: 25%;
@@ -92,18 +84,19 @@
           height: 100%;
           background:palevioletred;
           display:flex;
-          justify-content: center;
-          aligh-items:center;
+
       }
         .water{
             width:400px;
             height: 400px;
-            top:5%;
+            top: 35%;
+            left:35%;
             background-color: skyblue;
             border-radius: 50%;
             position: relative;
             box-shadow: inset 0 0 30px 0 rgba(0,0,0,.5), 0 4px 10px 0 rgba(0,0,0,.5);
             overflow: hidden;
+            align-items:center;
 
         }
         .water:before, .water:after{
@@ -153,6 +146,7 @@
 <body>
 <div class="loader hidden">
 <div class="water"></div>
+
 </div>
 </body>
 <div style="display: flex;
@@ -228,5 +222,13 @@
 
 
 </div>
+
 </body>
+
+<script text="text/javascript">
+    window.addEventListener("load", function () {
+       const loader = document.querySelector(".loader");
+       loader.className += " hidden";
+    });
+</script>
 </html>
