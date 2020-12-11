@@ -2,6 +2,7 @@
 
 use App\Models\Button;
 use App\Models\Test;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -29,26 +30,45 @@ Route::post('/show_data', function () {
 Route::get('/show_data', function () {
   return view('live');
 });
-Route::get('/payment/{id}', function () {
 
-    return view('UserLayouts.payment');
+Route::get('/payment/{id}', function ($id) {
+
+  return view('UserLayouts.payment', compact('id'));
 });
 
 Route::get('/paymentAuth', function (Request $request) {
-    $formOneData = ['name' => $request->name, 'duration' => $request->duration, 'payment_method' => $request->payment_method];
-    // dd($formOneData);
-    $paymentMethod = $request->payment_method;
-    return view('UserLayouts.paymentAuth', compact('paymentMethod'));
-});
-Route::get('/paymentRocket', function () {
-    return view('UserLayouts.paymentRocket');
+
+  $formData = [
+    'name' => $request->name,
+    'duration' => $request->duration,
+    'payment_method' => $request->payment_method,
+    'service_type' => $request->id
+  ];
+
+  $request->session()->put('formData', json_encode($formData));
+
+  $paymentMethod = $request->payment_method;
+
+  return view('UserLayouts.paymentAuth', compact('paymentMethod'));
 });
 
-Route::get('/paymentNogod', function () {
-    return view('UserLayouts.paymentNogod');
-});
-Route::get('/counter', function () {
-    return view('UserLayouts.Counter');
+
+Route::get('/counter', function (Request $request) {
+  $formData = json_decode($request->session()->get('formData'));
+
+  if ($formData) {
+    $formData->account_number = $request->account_number;
+    $transaction = new Transaction();
+    $transaction->account_number = $formData->account_number;
+    $transaction->payment_gateway = $formData->payment_method;
+    $transaction->service_type = $formData->service_type;
+    $transaction->duration = $formData->duration;
+    $transaction->name = $formData->name;
+    $transaction->save();
+    $request->session()->forget('formData');
+  }
+
+  return view('UserLayouts.Counter');
 });
 
 Route::post('/store_button_data', function (Request $request) {

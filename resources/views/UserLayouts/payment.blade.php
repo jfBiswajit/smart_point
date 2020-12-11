@@ -69,6 +69,7 @@ h2{position: center;
 
 <div class="container">
     <form action="{{ url("/paymentAuth") }}">
+    <input type="hidden" name="id" value="{{$id}}">
         <label for="fname">Type Your Name</label>
         <input type="text" id="fname" name="name" placeholder="Your full name.." required>
 
