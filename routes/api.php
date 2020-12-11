@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\BatteryStatus;
 use App\Models\Button;
 use App\Models\Test;
 use Illuminate\Http\Request;
@@ -21,12 +22,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('/send_data', function (Request $request) {
-  $test = new Test();
-  $test->val = $request->data;
-  $test->save();
+  $batteryStatus = new BatteryStatus();
+  $batteryStatus->label = $request->data;
+  $batteryStatus->save();
 
-  $latestButtonState = Button::latest()->first();
+  // $latestButtonState = Button::latest()->first();
 
-  $response = $latestButtonState->red . ',' . $latestButtonState->yellow . ',' . $latestButtonState->green;
-  return $response;
+  // $response = $latestButtonState->red . ',' . $latestButtonState->yellow . ',' . $latestButtonState->green;
+  // return $response;
 });
