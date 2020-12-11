@@ -15,9 +15,9 @@ class CreateButtonsTable extends Migration
     {
         Schema::create('buttons', function (Blueprint $table) {
             $table->id();
-            $table->boolean('red');
-            $table->boolean('yellow');
-            $table->boolean('green');
+            $table->boolean('phone');
+            $table->boolean('ev');
+            $table->boolean('water');
             $table->timestamps();
         });
     }
