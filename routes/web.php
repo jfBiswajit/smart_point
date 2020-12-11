@@ -72,9 +72,10 @@ Route::get('/counter', function (Request $request) {
     $transaction->name = $formData->name;
     $transaction->save();
     $request->session()->forget('formData');
-  }
 
-  return view('UserLayouts.Counter');
+    return view('UserLayouts.Counter');
+  }
+  return 'Sorry! Something went worng!';
 });
 
 Route::post('/store_button_data', function (Request $request) {
