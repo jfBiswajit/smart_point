@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4bd652bc-d84a-440a-b199-8f286f4e7fc9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/UserLayouts/dashbaord.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/db.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/UserLayouts/piUI.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/UserLayouts/piUI.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="36" column="18" lean-forward="true" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+            <state relative-caret-position="221">
+              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
               <folding>
                 <element signature="e#7#29#0#PHP" expanded="true" />
               </folding>
@@ -33,11 +33,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/db.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/UserLayouts/dashbaord.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="106" column="44" lean-forward="true" selection-start-line="106" selection-start-column="44" selection-end-line="106" selection-end-column="44" />
+            <state relative-caret-position="1547">
+              <caret line="91" column="19" lean-forward="true" selection-end-line="172" />
               <folding>
                 <element signature="e#143#149#1#HTML" expanded="true" />
                 <element signature="e#1163#1169#1#HTML" expanded="true" />
@@ -46,11 +58,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/UserLayouts/piUI.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="133" column="47" selection-start-line="133" selection-start-column="47" selection-end-line="133" selection-end-column="47" />
+            <state relative-caret-position="293">
+              <caret line="75" column="27" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,15 +84,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="229">
               <caret line="148" column="7" lean-forward="true" selection-end-line="149" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/UserLayouts/paymentAuth.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2006">
-              <caret line="122" column="35" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -136,10 +142,11 @@
         <option value="$PROJECT_DIR$/resources/views/UserLayouts/paymentAuth.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/UserLayouts/counter.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/UserLayouts/payment.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/UserLayouts/piUI.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/UserLayouts/waterCounter.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/UserLayouts/dashbaord.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/db.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/UserLayouts/piUI.blade.php" />
       </list>
     </option>
   </component>
@@ -252,22 +259,11 @@
       <path value="$PROJECT_DIR$/vendor/graham-campbell/result-type" />
     </include_path>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/smart_point.iml" />
-        <option value="$PROJECT_DIR$/.idea/php.xml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="156" />
-    <option name="y" value="205" />
+    <option name="x" value="1806" />
+    <option name="y" value="231" />
     <option name="width" value="1614" />
-    <option name="height" value="914" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -348,6 +344,13 @@
               <item name="smart_point" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smart_point" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smart_point" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="UserLayouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -398,18 +401,18 @@
       <option name="presentableId" value="Default" />
       <updated>1607668916151</updated>
       <workItem from="1607668917361" duration="17509000" />
-      <workItem from="1607714531339" duration="639000" />
+      <workItem from="1607714531339" duration="2620000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18148000" />
+    <option name="totallyTimeSpent" value="20129000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="46" width="1296" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13006397" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.197411" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -424,7 +427,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.20151679" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.21453287" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -546,13 +549,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/UserLayouts/piUI.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="133" column="47" selection-start-line="133" selection-start-column="47" selection-end-line="133" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/UserLayouts/waterCounter.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -569,8 +565,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="36" column="18" lean-forward="true" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+        <state relative-caret-position="221">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
           <folding>
             <element signature="e#7#29#0#PHP" expanded="true" />
           </folding>
@@ -579,11 +575,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/UserLayouts/dashbaord.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="106" column="44" lean-forward="true" selection-start-line="106" selection-start-column="44" selection-end-line="106" selection-end-column="44" />
+        <state relative-caret-position="1547">
+          <caret line="91" column="19" lean-forward="true" selection-end-line="172" />
           <folding>
             <element signature="e#143#149#1#HTML" expanded="true" />
             <element signature="e#1163#1169#1#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/db.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/UserLayouts/piUI.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="75" column="27" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
