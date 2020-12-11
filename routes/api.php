@@ -7,6 +7,7 @@ use App\Models\Transaction;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\HttpFoundation\Response;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,5 +69,5 @@ Route::post('/send_data', function (Request $request) {
 
   $indicatorData = [$phone, $ev, $water];
 
-  dd($indicatorData);
+  return response()->json([$indicatorData]);
 });
