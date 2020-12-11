@@ -21,6 +21,7 @@ class CreateTransactionsTable extends Migration
       $table->string('duration');
       $table->string('fname');
       $table->string('lname');
+      $table->boolean('is_active');
       $table->timestamps();
     });
   }

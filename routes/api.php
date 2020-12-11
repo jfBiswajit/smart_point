@@ -3,6 +3,8 @@
 use App\Models\BatteryStatus;
 use App\Models\Button;
 use App\Models\Test;
+use App\Models\Transaction;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -22,12 +24,52 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('/send_data', function (Request $request) {
-  $batteryStatus = new BatteryStatus();
-  $batteryStatus->label = $request->data;
-  $batteryStatus->save();
 
-  // $latestButtonState = Button::latest()->first();
+  // $batteryStatus = new BatteryStatus();
+  // $batteryStatus->label = $request->data;
+  // $batteryStatus->save();
 
-  // $response = $latestButtonState->red . ',' . $latestButtonState->yellow . ',' . $latestButtonState->green;
-  // return $response;
+  $transactions = Transaction::all();
+  $indicatorData = [];
+  $phone = 0;
+  $ev = 0;
+  $water = 0;
+
+  foreach ($transactions as $transaction) {
+    if ($transaction->service_type == 1) {
+      $duration = $transaction->duration;
+      $validTime = ($transaction->created_at)->addSecond($duration);
+      $now = Carbon::now();
+
+      if ($validTime >= $now) {
+        $phone = 1;
+      }
+    }
+
+    if ($transaction->service_type == 2) {
+      $duration = $transaction->duration;
+      $validTime = ($transaction->created_at)->addSecond($duration);
+      $now = Carbon::now();
+
+      if ($validTime >= $now) {
+        $ev = 1;
+      }
+    }
+
+    if ($transaction->service_type == 3) {
+      $duration = $transaction->duration;
+      $validTime = ($transaction->created_at)->addSecond($duration);
+      $now = Carbon::now();
+
+      if ($validTime >= $now) {
+        $water = 1;
+      }
+    }
+  }
+
+  $indicatorData = [$phone, $ev, $water];
+
+  dd($indicatorData);
+
+  $transactions = Transaction::all();
 });
