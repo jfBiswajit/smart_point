@@ -103,8 +103,16 @@
 
 
         <div class="card">
-
-            <img class='image' src="{{asset('assets/images/bkash.jpg')}}">
+            @php
+            if ($paymentMethod == 1) {
+               $img = 'bkash.jpg';
+            } else if ($paymentMethod == 2) {
+              $img = 'rocket.jpg';
+            } else {
+              $img = 'nogod.jpg';
+            }
+            @endphp
+            <img class='image' src="{{asset("assets/images/$img")}}">
         </div>
         <h1>Total Amount To pay: <span>50 Taka</span></h1>
     </div>

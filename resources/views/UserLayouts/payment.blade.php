@@ -47,14 +47,8 @@ h2{position: center;
         padding: 20px;
     }
 </style>
-<h1>Added this line by Biswajti</h1>
-<h1>Added this line by Biswajti</h1>
-=======
-</style><h1>asldfjlaksdjfasdf</h1>\
-<h2>asldfjalsdjflaskdfj</h2>
 
 
-<h1>BIJT</h1>
 <body>
 <div style="display: flex;
   justify-content: center;
@@ -73,7 +67,7 @@ h2{position: center;
 
 </div>
 <h2>SMART Point</h2>
-<h2>SMART Point</h2><h2>SMART Point</h2><h2>SMART Point</h2>
+
 <div class="container">
     <form action="{{ url("/paymentAuth") }}">
         <label for="fname">Type Your Name</label>

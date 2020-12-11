@@ -30,11 +30,15 @@ Route::get('/show_data', function () {
   return view('live');
 });
 Route::get('/payment/{id}', function () {
+
     return view('UserLayouts.payment');
 });
 
-Route::get('/paymentAuth', function () {
-    return view('UserLayouts.paymentAuth');
+Route::get('/paymentAuth', function (Request $request) {
+    $formOneData = ['name' => $request->name, 'duration' => $request->duration, 'payment_method' => $request->payment_method];
+    // dd($formOneData);
+    $paymentMethod = $request->payment_method;
+    return view('UserLayouts.paymentAuth', compact('paymentMethod'));
 });
 Route::get('/paymentRocket', function () {
     return view('UserLayouts.paymentRocket');
