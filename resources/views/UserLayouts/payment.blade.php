@@ -10,6 +10,13 @@
         border-radius: 4px;
         box-sizing: border-box;
     }
+    .container{
+
+        position: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
 
     input[type=submit] {
         width: 100%;
@@ -25,7 +32,10 @@
     input[type=submit]:hover {
         background-color: #45a049;
     }
-
+h2{position: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;}
     div {
         border-radius: 5px;
         background-color: #f2f2f2;
@@ -34,15 +44,14 @@
 </style>
 <body>
 
-<h3>Using CSS to style an HTML Form</h3>
+<h2>SMART Point</h2>
 
-<div>
+<div class="container">
     <form action="{{ url("/paymentAuth") }}">
         <label for="fname">Type Your Name</label>
         <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
 
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name.." requried>
+
 
         <label for="country">Duration</label>
         <select id="country" name="country">

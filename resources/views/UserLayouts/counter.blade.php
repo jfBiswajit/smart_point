@@ -27,11 +27,11 @@
             justify-content: center;
             flex-direction: row;
         }
-     .image{background-color: #999;
-         width: 200px;
-         height: 180px;
-         display: inline-block;
-         overflow: hidden;}
+        .image{background-color: #999;
+            width: 200px;
+            height: 180px;
+            display: inline-block;
+            overflow: hidden;}
         input[type=submit] {
             width: 100%;
             background-color: #4CAF50;
@@ -92,7 +92,7 @@
 <div style="display: flex;
   justify-content: center;
   flex-direction: row;" class="row">
-<h2>Complete You Payment</h2>
+    <h2>Complete You Payment</h2>
 
 </div>
 <div style="display: flex;
@@ -102,26 +102,12 @@
 
 
 
-        <div class="card">
 
-            <img class='image' src="{{asset('assets/images/bkash.jpg')}}">
-        </div>
-        <h1>Total Amount To pay: <span>50 Taka</span></h1>
+        <h1>Time Left : <span>50 Minute</span></h1>
     </div>
 
 
 </div>
-<div class="container">
-<form action="{{ url(url("/counter")) }}">
-    <label for="fname">Type Account Number</label>
-    <input type="text" id="fname" name="firstname" placeholder="Account Number" required>
 
-
-
-
-
-    <input type="submit" value="Proceed To Payment">
-</form>
-</div>
 </body>
 </html>

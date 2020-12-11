@@ -40,6 +40,13 @@ Route::get('/paymentRocket', function () {
     return view('UserLayouts.paymentRocket');
 });
 
+Route::get('/paymentNogod', function () {
+    return view('UserLayouts.paymentNogod');
+});
+Route::get('/counter', function () {
+    return view('UserLayouts.Counter');
+});
+
 Route::post('/store_button_data', function (Request $request) {
   $button = new Button();
   $button->red = $request->red;
