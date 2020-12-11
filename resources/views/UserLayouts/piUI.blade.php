@@ -73,7 +73,7 @@
 
         /* Style the counter cards */
         .card {
-            box-shadow:10px 10px 8px 2px rgba(0, 0,.3, 0.2);
+            box-shadow:10px 10px 8px 5px rgba(0, 0,.3, 0.2);
             padding: 16px;
             text-align: center;
             background-color: white;
@@ -81,9 +81,80 @@
 
         }
     </style>
+    <style media="screen">
+
+      .loader{
+          position:fixed;
+          z-index:99;
+          top:0;
+          left:0;
+          width:100%;
+          height: 100%;
+          background:palevioletred;
+          display:flex;
+          justify-content: center;
+          aligh-items:center;
+      }
+        .water{
+            width:400px;
+            height: 400px;
+            top:5%;
+            background-color: skyblue;
+            border-radius: 50%;
+            position: relative;
+            box-shadow: inset 0 0 30px 0 rgba(0,0,0,.5), 0 4px 10px 0 rgba(0,0,0,.5);
+            overflow: hidden;
+
+        }
+        .water:before, .water:after{
+            content:'';
+            position: absolute;
+            width:400px;
+            height: 400px;
+            top:-150px;
+            background-color: #fff;
+        }
+        .water:before{
+            border-radius: 45%;
+            background:rgba(255,255,255,.7);
+            animation:wave 3s linear infinite;
+        }
+        .water:after{
+            border-radius: 35%;
+            background:rgba(255,255,255,.3);
+            animation:wave 3s linear infinite;
+        }
+        @keyframes wave {
+            0% {
+                transform: rotate(0);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        .loader.hidden{
+            animation: fadeOut 5s;
+            animation-fill-mode: forwards;
+        }
+            @keyframes fadeOut {
+                100%{
+                    opacity: 0;
+                    visibility:hidden;
+                }
+            }
+
+
+
+
+ </style>
+
 </head>
 <body>
-
+<body>
+<div class="loader hidden">
+<div class="water"></div>
+</div>
+</body>
 <div style="display: flex;
   justify-content: center;
   flex-direction: row;" class="container">
