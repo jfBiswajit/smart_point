@@ -32,9 +32,10 @@
     input[type=submit]:hover {
         background-color: #45a049;
     }
-    .image{background-color: #999;
-        width: 200px;
-        height: 180px;
+    .image{
+
+        width:400px;
+        height: 100px;
         display: inline-block;
         overflow: hidden;}
 h2{position: center;
@@ -47,18 +48,10 @@ h2{position: center;
         padding: 20px;
     }
 </style>
-<h1>Added this line by Biswajti</h1>
-<h1>Added this line by Biswajti</h1>
-=======
-</style><h1>asldfjlaksdjfasdf</h1>\
-<h2>asldfjalsdjflaskdfj</h2>
-
-
-<h1>BIJT</h1>
 <body>
 <div style="display: flex;
   justify-content: center;
-  flex-direction: row;" class="row">
+  flex-direction: row;" class="container">
     <div class="">
 
 
@@ -67,13 +60,12 @@ h2{position: center;
 
             <img class='image' src="{{asset('assets/images/smartPoint.png')}}">
         </div>
-        <h1>Total Amount To pay: <span>50 Taka</span></h1>
+
     </div>
 
 
 </div>
-<h2>SMART Point</h2>
-<h2>SMART Point</h2><h2>SMART Point</h2><h2>SMART Point</h2>
+
 <div class="container">
     <form action="{{ url("/paymentAuth") }}">
         <label for="fname">Type Your Name</label>
