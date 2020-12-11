@@ -3,6 +3,7 @@
 use App\Models\Button;
 use App\Models\Test;
 use App\Models\Transaction;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -71,9 +72,10 @@ Route::get('/counter', function (Request $request) {
     $transaction->duration = $formData->duration;
     $transaction->name = $formData->name;
     $transaction->save();
-    $request->session()->forget('formData');
+    // $request->session()->forget('formData');
+    $counter = Carbon::now()->addSecond($transaction->duration);
 
-    return view('UserLayouts.Counter');
+    return view('UserLayouts.Counter', compact('counter'));
   }
   return 'Sorry! Something went worng!';
 });

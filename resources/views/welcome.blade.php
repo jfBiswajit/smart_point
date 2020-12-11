@@ -52,6 +52,7 @@
 
                     $('#red_clock').countdown(countdownToTime, function (event) {
                         var totalHours = event.offset.totalDays * 24 + event.offset.hours;
+                        console.log(totalHours);
                         $(this).html(event.strftime(totalHours + ' hr %M min %S sec'));
                         if (event.type === 'finish') {
                             currentBtn.disabled = false;
