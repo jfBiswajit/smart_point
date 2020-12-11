@@ -68,7 +68,7 @@ h2{position: center;
 
 </div>
 <h2>SMART Point</h2>
-
+<h2>SMART Point</h2><h2>SMART Point</h2><h2>SMART Point</h2>
 <div class="container">
     <form action="{{ url("/paymentAuth") }}">
         <label for="fname">Type Your Name</label>
