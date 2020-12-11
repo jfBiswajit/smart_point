@@ -2,6 +2,7 @@
 
 use App\Models\BatteryStatus;
 use App\Models\Button;
+use App\Models\Log;
 use App\Models\Test;
 use App\Models\Transaction;
 use Carbon\Carbon;
@@ -25,10 +26,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('/send_data', function (Request $request) {
-
-  // $batteryStatus = new BatteryStatus();
-  // $batteryStatus->label = $request->data;
-  // $batteryStatus->save();
+  $batteryStatus = new BatteryStatus();
+  $batteryStatus->label = $request->data;
+  $batteryStatus->save();
 
   $transactions = Transaction::all();
   $indicatorData = [];
@@ -45,6 +45,15 @@ Route::post('/send_data', function (Request $request) {
       if ($validTime >= $now) {
         $phone = 1;
       } else {
+
+        $log = new Log();
+        $log->account_number = $transaction->account_number;
+        $log->payment_gateway = $transaction->payment_method;
+        $log->service_type = $transaction->service_type;
+        $log->duration = $transaction->duration;
+        $log->name = $transaction->name;
+
+        $log->save();
         $transaction->delete();
       }
     }
@@ -58,12 +67,30 @@ Route::post('/send_data', function (Request $request) {
         $ev = 1;
       } else {
         $transaction->delete();
+
+        $log = new Log();
+        $log->account_number = $transaction->account_number;
+        $log->payment_gateway = $transaction->payment_method;
+        $log->service_type = $transaction->service_type;
+        $log->duration = $transaction->duration;
+        $log->name = $transaction->name;
+
+        $log->save();
       }
     }
 
     if ($transaction->service_type == 3) {
       $water = 1;
       $transaction->delete();
+
+      $log = new Log();
+      $log->account_number = $transaction->account_number;
+      $log->payment_gateway = $transaction->payment_method;
+      $log->service_type = $transaction->service_type;
+      $log->duration = $transaction->duration;
+      $log->name = $transaction->name;
+
+      $log->save();
     }
   }
 

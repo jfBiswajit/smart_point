@@ -69,10 +69,9 @@ Route::get('/counter', function (Request $request) {
     $transaction->account_number = $formData->account_number;
     $transaction->payment_gateway = $formData->payment_method;
     $transaction->service_type = $formData->service_type;
-    $transaction->duration = $formData->duration;
+    $transaction->duration = $formData->duration ?? 0;
     $transaction->name = $formData->name;
     $transaction->save();
-    // $request->session()->forget('formData');
     $counter = Carbon::now()->addSecond($transaction->duration);
 
     return view('UserLayouts.Counter', compact('counter'));
