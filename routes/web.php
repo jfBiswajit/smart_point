@@ -29,7 +29,7 @@ Route::post('/show_data', function () {
 Route::get('/show_data', function () {
   return view('live');
 });
-Route::get('/payment', function () {
+Route::get('/payment/{id}', function () {
     return view('UserLayouts.payment');
 });
 
