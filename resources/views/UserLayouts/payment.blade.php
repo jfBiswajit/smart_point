@@ -32,6 +32,11 @@
     input[type=submit]:hover {
         background-color: #45a049;
     }
+    .image{background-color: #999;
+        width: 200px;
+        height: 180px;
+        display: inline-block;
+        overflow: hidden;}
 h2{position: center;
     display: flex;
     justify-content: center;
@@ -43,7 +48,22 @@ h2{position: center;
     }
 </style>
 <body>
+<div style="display: flex;
+  justify-content: center;
+  flex-direction: row;" class="row">
+    <div class="">
 
+
+
+        <div class="card">
+
+            <img class='image' src="{{asset('assets/images/smartPoint.png')}}">
+        </div>
+        <h1>Total Amount To pay: <span>50 Taka</span></h1>
+    </div>
+
+
+</div>
 <h2>SMART Point</h2>
 
 <div class="container">
