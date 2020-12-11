@@ -27,18 +27,16 @@ Route::post('/show_data', function () {
 });
 
 Route::get('/piUI', function () {
-    return view('/UserLayouts/piUI');
+  return view('/UserLayouts/piUI');
 });
 Route::get('/waterCounter', function (Request $request) {
-    return view('/UserLayouts/waterCounter');
+  return view('/UserLayouts/waterCounter');
 })->name('water');
 
 Route::get('get_your_water', function (Request $request) {
   $formData = json_decode($request->session()->get('formData'));
 
   if ($formData) {
-    dd($formData);
-    $formData->account_number = $request->account_number;
     $transaction = new Transaction();
     $transaction->account_number = $formData->account_number;
     $transaction->payment_gateway = $formData->payment_method;
@@ -47,7 +45,6 @@ Route::get('get_your_water', function (Request $request) {
     $transaction->name = $formData->name;
     $transaction->save();
     $counter = Carbon::now()->addSecond($transaction->duration);
-
     $request->session()->forget('formData');
     return 'please get your water!';
   }
@@ -86,24 +83,26 @@ Route::get('/counter', function (Request $request) {
 
   if ($formData) {
 
-      if ($formData->service_type == 3) {
-        return redirect()->route('water');
-      }
-
+    if ($formData->service_type == 3) {
       $formData->account_number = $request->account_number;
       $request->session()->put('formData', json_encode($formData));
-      $transaction = new Transaction();
-      $transaction->account_number = $formData->account_number;
-      $transaction->payment_gateway = $formData->payment_method;
-      $transaction->service_type = $formData->service_type;
-      $transaction->duration = $formData->duration ?? 0;
-      $transaction->name = $formData->name;
-      $transaction->save();
-      $counter = Carbon::now()->addSecond($transaction->duration);
-
-      $request->session()->forget('formData');
-      return view('UserLayouts.Counter', compact('counter'));
+      return redirect()->route('water');
     }
+
+    $formData->account_number = $request->account_number;
+    $request->session()->put('formData', json_encode($formData));
+    $transaction = new Transaction();
+    $transaction->account_number = $formData->account_number;
+    $transaction->payment_gateway = $formData->payment_method;
+    $transaction->service_type = $formData->service_type;
+    $transaction->duration = $formData->duration ?? 0;
+    $transaction->name = $formData->name;
+    $transaction->save();
+    $counter = Carbon::now()->addSecond($transaction->duration);
+
+    $request->session()->forget('formData');
+    return view('UserLayouts.Counter', compact('counter'));
+  }
 
   return 'Sorry! Something went worng!';
 });
