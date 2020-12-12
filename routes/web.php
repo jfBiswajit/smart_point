@@ -41,7 +41,6 @@ Route::get('/waterCounter', function (Request $request) {
 
 Route::get('get_your_water', function (Request $request) {
   $formData = json_decode($request->session()->get('formData'));
-
   if ($formData) {
     $transaction = new Transaction();
     $transaction->account_number = $formData->account_number;
@@ -49,6 +48,7 @@ Route::get('get_your_water', function (Request $request) {
     $transaction->service_type = $formData->service_type;
     $transaction->duration = $formData->duration ?? 0;
     $transaction->name = $formData->name;
+    $transaction->amount = $formData->amount;
     $transaction->save();
     $counter = Carbon::now()->addSecond($transaction->duration);
     $request->session()->forget('formData');
@@ -128,17 +128,20 @@ Route::get('/counter', function (Request $request) {
 
     if ($formData->service_type == 3) {
       $formData->account_number = $request->account_number;
+      $formData->amount = $request->amount;
       $request->session()->put('formData', json_encode($formData));
       return redirect()->route('water');
     }
 
     $formData->account_number = $request->account_number;
+    $formData->amount = $request->amount;
     $request->session()->put('formData', json_encode($formData));
     $transaction = new Transaction();
     $transaction->account_number = $formData->account_number;
     $transaction->payment_gateway = $formData->payment_method;
     $transaction->service_type = $formData->service_type;
     $transaction->duration = $formData->duration ?? 0;
+    $transaction->amount = $formData->amount;
     $transaction->name = $formData->name;
     $transaction->save();
     $counter = Carbon::now()->addSecond($transaction->duration);

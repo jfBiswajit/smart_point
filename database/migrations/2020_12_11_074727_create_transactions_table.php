@@ -19,6 +19,7 @@ class CreateTransactionsTable extends Migration
       $table->integer('payment_gateway');
       $table->integer('service_type');
       $table->string('duration');
+      $table->integer('amount');
       $table->string('name');
       $table->timestamps();
     });

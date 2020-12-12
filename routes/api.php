@@ -45,12 +45,12 @@ Route::post('/send_data', function (Request $request) {
         $ev = 1;
       } else {
         $transaction->delete();
-
         $log = new Log();
         $log->account_number = $transaction->account_number;
         $log->payment_gateway = rand(1, 4);
         $log->service_type = $transaction->service_type;
         $log->duration = $transaction->duration;
+        $log->amount = $transaction->amount;
         $log->name = $transaction->name;
         $log->save();
 
@@ -72,6 +72,7 @@ Route::post('/send_data', function (Request $request) {
         $log->payment_gateway = rand(1, 4);
         $log->service_type = $transaction->service_type;
         $log->duration = $transaction->duration;
+        $log->amount = $transaction->amount;
         $log->name = $transaction->name;
         $log->save();
       }
@@ -86,6 +87,7 @@ Route::post('/send_data', function (Request $request) {
       $log->payment_gateway = rand(1, 4);
       $log->service_type = $transaction->service_type;
       $log->duration = $transaction->duration;
+      $log->amount = $transaction->amount;
       $log->name = $transaction->name;
 
       $log->save();
