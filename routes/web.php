@@ -32,6 +32,9 @@ Route::post('/show_data', function () {
 Route::get('/piUI', function () {
   return view('/UserLayouts/piUI');
 });
+Route::get('/login', function () {
+    return view('/login/login');
+});
 Route::get('/waterCounter', function (Request $request) {
   return view('/UserLayouts/waterCounter');
 })->name('water');
