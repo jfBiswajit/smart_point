@@ -27,12 +27,12 @@
     <div class="container-login100">
         <div class="wrap-login100">
             <div class="login100-pic js-tilt" data-tilt>
-                <img src="images/img-01.png" alt="IMG">
+                <img style="margin-top:100px;" src="{{asset('assets/images/smartPoint.png')}}" alt="IMG">
             </div>
 
-            <form class="login100-form validate-form">
+            <form type="post" class="login100-form validate-form" action="{{url('/db')}}">
 					<span class="login100-form-title">
-						Member Login
+						Admin Login
 					</span>
 
                 <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
@@ -52,7 +52,7 @@
                 </div>
 
                 <div class="container-login100-form-btn">
-                    <button class="login100-form-btn">
+                    <button href="{{url('/db')}}" class="login100-form-btn">
                         Login
                     </button>
                 </div>

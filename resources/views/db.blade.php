@@ -201,7 +201,7 @@
 
 
 
-
+@yield('css')
 </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -221,6 +221,22 @@
     </style>
 </head>
 <body>
+
+<div style="display: flex;
+  justify-content: center;
+  flex-direction: row;" class="container">
+    <div class="">
+
+
+
+        <div class="header-card">
+
+            <img class='header' src="{{asset('assets/images/smartPoint.png')}}">
+        </div>
+
+    </div>
+
+</div>
 HTML CSSResult Skip Results Iframe
 <input type="radio" class="cath_NA" id="r1" name="r" checked><label for="r1">empty</label>
 <input type="radio" class="cath_0"  id="r2" name="r"><label for="r2">%0</label>
@@ -235,68 +251,31 @@ HTML CSSResult Skip Results Iframe
     <div class="PPole"></div>
 </div>
 
-<h2>Responsive Table</h2>
-<p>If you have a table that is too wide, you can add a container element with overflow-x:auto around the table, and it will display a horizontal scroll bar when needed.</p>
-<p>Resize the browser window to see the effect. Try to remove the div element and see what happens to the table.</p>
+
 
 <div style="overflow-x:auto;">
     <table>
         <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Points</th>
-            <th>Points</th>
-            <th>Points</th>
-            <th>Points</th>
-            <th>Points</th>
-            <th>Points</th>
-            <th>Points</th>
-            <th>Points</th>
-            <th>Points</th>
-            <th>Points</th>
+            <th>SL</th>
+            <th>Name</th>
+            <th>Payment Method</th>
+            <th>AC No</th>
+            <th>Service Type</th>
+            <th>Time Duration</th>
+            <th>Amount</th>
+
         </tr>
         <tr>
-            <td>Jill</td>
+            <td>l</td>
             <td>Smith</td>
             <td>50</td>
             <td>50</td>
             <td>50</td>
             <td>50</td>
             <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
+
         </tr>
-        <tr>
-            <td>Eve</td>
-            <td>Jackson</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-        </tr>
-        <tr>
-            <td>Adam</td>
-            <td>Johnson</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-        </tr>
+
     </table>
 </div>
 </body>
