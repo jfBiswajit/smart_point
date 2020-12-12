@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4bd652bc-d84a-440a-b199-8f286f4e7fc9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/UserLayouts/dashbaord.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/UserLayouts/dashbaord.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/UserLayouts/payment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/UserLayouts/payment.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/UserLayouts/paymentAuth.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/UserLayouts/paymentAuth.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/UserLayouts/piUI.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/UserLayouts/piUI.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/UserLayouts/waterCounter.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/UserLayouts/waterCounter.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/db.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/db.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/jsCss.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/jsCss.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/login/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login/login.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="4bd652bc-d84a-440a-b199-8f286f4e7fc9" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +22,13 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/resources/views/db.blade.php">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="425">
-                    <caret line="281" column="12" lean-forward="true" selection-start-line="281" selection-start-column="12" selection-end-line="281" selection-end-column="12" />
+                  <state relative-caret-position="204">
+                    <caret line="305" column="53" selection-start-line="305" selection-start-column="53" selection-end-line="305" selection-end-column="53" />
+                    <folding>
+                      <element signature="e#7174#7246#0#HTML" expanded="true" />
+                      <element signature="e#7458#7530#0#HTML" expanded="true" />
+                      <element signature="e#8371#8395#0#HTML" expanded="true" />
+                    </folding>
                   </state>
                 </provider>
               </entry>
@@ -47,8 +43,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+            <state relative-caret-position="323">
+              <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
               <folding>
                 <element signature="e#7#29#0#PHP" expanded="true" />
               </folding>
@@ -91,7 +87,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/UserLayouts/piUI.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="313">
-              <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+              <caret line="85" selection-start-line="85" selection-end-line="85" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -121,7 +117,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/UserLayouts/paymentAuth.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="612">
-              <caret line="146" column="14" selection-start-line="146" selection-start-column="14" selection-end-line="146" selection-end-column="14" />
+              <caret line="147" column="14" selection-start-line="147" selection-start-column="14" selection-end-line="147" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -129,11 +125,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/UserLayouts/payment.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="117" column="14" selection-start-line="117" selection-start-column="14" selection-end-line="117" selection-end-column="14" />
-              <folding>
-                <element signature="n#style#0;n#input#1;n#form#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="867">
+              <caret line="130" column="14" selection-start-line="130" selection-start-column="14" selection-end-line="130" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -178,10 +171,10 @@
         <option value="$PROJECT_DIR$/resources/views/UserLayouts/piUI.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/jsCss.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/UserLayouts/payment.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/db.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/UserLayouts/waterCounter.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/UserLayouts/paymentAuth.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/login/login.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/db.blade.php" />
       </list>
     </option>
   </component>
@@ -450,12 +443,12 @@
       <updated>1607668916151</updated>
       <workItem from="1607668917361" duration="17509000" />
       <workItem from="1607714531339" duration="7354000" />
-      <workItem from="1607753445542" duration="10575000" />
+      <workItem from="1607753445542" duration="11208000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35438000" />
+    <option name="totallyTimeSpent" value="36071000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-89" width="1936" height="1056" extended-state="7" />
@@ -612,7 +605,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/UserLayouts/piUI.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
-          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -632,8 +625,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+        <state relative-caret-position="323">
+          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
           <folding>
             <element signature="e#7#29#0#PHP" expanded="true" />
           </folding>
@@ -642,11 +635,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/UserLayouts/payment.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="117" column="14" selection-start-line="117" selection-start-column="14" selection-end-line="117" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#input#1;n#form#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="867">
+          <caret line="130" column="14" selection-start-line="130" selection-start-column="14" selection-end-line="130" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -665,7 +655,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/UserLayouts/paymentAuth.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
-          <caret line="146" column="14" selection-start-line="146" selection-start-column="14" selection-end-line="146" selection-end-column="14" />
+          <caret line="147" column="14" selection-start-line="147" selection-start-column="14" selection-end-line="147" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -678,8 +668,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/db.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="281" column="12" lean-forward="true" selection-start-line="281" selection-start-column="12" selection-end-line="281" selection-end-column="12" />
+        <state relative-caret-position="204">
+          <caret line="305" column="53" selection-start-line="305" selection-start-column="53" selection-end-line="305" selection-end-column="53" />
+          <folding>
+            <element signature="e#7174#7246#0#HTML" expanded="true" />
+            <element signature="e#7458#7530#0#HTML" expanded="true" />
+            <element signature="e#8371#8395#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
