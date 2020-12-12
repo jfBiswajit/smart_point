@@ -51,9 +51,21 @@
             background-color: #f2f2f2;
             padding: 20px;
         }
+        .card1 {
+            box-shadow:10px 10px 8px 5px rgba(0, 0,.3, 0.2);
+            padding: 16px;
+
+            background-color: white;
+            border-radius: 25px;
+
+        }
     </style>
+    @include("/layouts/jsCss")
+    @yield('ldCSS')
 </head>
 <body>
+@include("/layouts/jsCss")
+@yield('content')
 <div style="display: flex;
   justify-content: center;
   flex-direction: row;" class="card">
@@ -86,11 +98,11 @@
     <div class="card"><h2>Service : {{$serviceType}}</h2></div></div>
 
 <div class="container">
-    <div class="card">
+    <div class="card1">
     <form action="{{ url("/paymentAuth") }}">
         <input type="hidden" name="id" value="{{$id}}">
         <label for="fname">Type Your Name</label>
-        <input class="input100" type="text" id="fname" name="name" placeholder="Your full name.." required>
+        <input style="text-align:left" class="input100" type="text" id="fname" name="name" placeholder="Your full name.." required>
 
 
 
@@ -115,4 +127,6 @@
 </div>
 </div>
 
+</body>
+@yield('ldJs')
 </html>

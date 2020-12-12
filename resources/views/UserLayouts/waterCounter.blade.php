@@ -95,9 +95,12 @@
             background-color: white;
         }
     </style>
+    @include("/layouts/jsCss")
+    @yield('ldCSS')
 </head>
 <body>
-
+@include("/layouts/jsCss")
+@yield('content')
 <div style="display: flex;
   justify-content: center;
   flex-direction: row;" class="container">
@@ -168,4 +171,5 @@
 
 </div>
 </body>
+@yield('ldJs')
 </html>

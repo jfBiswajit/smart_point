@@ -67,44 +67,100 @@
             text-align: center;
             background-color: white;
             border-radius: 25px;
+        .card1 {
+            box-shadow:10px 10px 8px 5px rgba(0, 0,.3, 0.2);
+            padding: 16px;
+
+            background-color: white;
+            border-radius: 25px;
 
         }
     </style>
 
-    <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="css/util.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <!--===============================================================================================-->
 
 @endsection
 
 @section('js')
 
-    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-    <!--===============================================================================================-->
-    <script src="vendor/bootstrap/js/popper.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <!--===============================================================================================-->
-    <script src="vendor/select2/select2.min.js"></script>
-    <!--===============================================================================================-->
-    <script src="vendor/tilt/tilt.jquery.min.js"></script>
-    <script >
-        $('.js-tilt').tilt({
-            scale: 1.1
-        })
+
+    @endsection
+
+@section('content')
+    <div class="loader">
+        <h2 class="animate">Loading</h2>
+    </div>
+    @endsection
+
+@section("ldCSS")
+    <style media="screen">
+
+        @keyframes load {
+            0%{
+                opacity: 0.08;
+                /*         font-size: 10px; */
+                /* 				font-weight: 400; */
+                filter: blur(5px);
+                letter-spacing: 3px;
+            }
+            100%{
+                /*         opacity: 1; */
+                /*         font-size: 12px; */
+                /* 				font-weight:600; */
+                /* 				filter: blur(0); */
+            }
+        }
+        .loader{
+            position:fixed;
+            z-index:99;
+            top:0;
+            left:0;
+            width:100%;
+            height: 100%;
+            background:black;
+            display:flex;
+
+        }
+
+        .loader.hidden{
+            animation: fadeOut 2s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeOut {
+            100%{
+                opacity: 0;
+                visibility:hidden;
+            }
+        }
+
+        .animate {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height:100%;
+            margin: auto;
+            /* 	width: 350px; */
+            /* 	font-size:26px; */
+            font-family: Helvetica, sans-serif, Arial;
+            animation: load 2s infinite 0s ease-in-out;
+            animation-direction: alternate;
+            text-shadow: 0 0 1px white;
+        }
+        body, html{
+            height: 96vh;
+
+            color:black;
+        }
+    </style>
+
+    @endsection
+
+
+@section('ldJs')
+    <script text="text/javascript">
+        window.addEventListener("load", function () {
+            const loader = document.querySelector(".loader");
+            loader.className += " hidden";
+        });
     </script>
-    <!--===============================================================================================-->
-    <script src="js/main.js"></script>
     @endsection

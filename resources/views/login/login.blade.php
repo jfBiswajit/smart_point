@@ -20,9 +20,13 @@
     <link rel="stylesheet" type="text/css" href="css/util.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!--===============================================================================================-->
+
+    @include("/layouts/jsCss")
+    @yield('ldCSS')
 </head>
 <body>
-
+@include("/layouts/jsCss")
+@yield('content')
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100">
@@ -98,4 +102,5 @@
 <script src="js/main.js"></script>
 
 </body>
+@yield('ldJs')
 </html>
