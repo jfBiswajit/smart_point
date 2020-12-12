@@ -144,8 +144,7 @@
 </head>
 <body>
 <body>
-<div class="loader hidden">
-<div class="water"></div>
+
 
 </div>
 </body>
@@ -225,10 +224,10 @@
 
 </body>
 
-<script text="text/javascript">
+{{-- <script text="text/javascript">
     window.addEventListener("load", function () {
        const loader = document.querySelector(".loader");
        loader.className += " hidden";
     });
-</script>
+</script> --}}
 </html>

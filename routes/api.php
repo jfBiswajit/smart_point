@@ -31,33 +31,11 @@ Route::post('/send_data', function (Request $request) {
   $batteryStatus->save();
 
   $transactions = Transaction::all();
-  $indicatorData = [];
   $phone = 0;
   $ev = 0;
   $water = 0;
 
   foreach ($transactions as $transaction) {
-    if ($transaction->service_type == 1) {
-      $duration = $transaction->duration;
-      $validTime = ($transaction->created_at)->addSecond($duration);
-      $now = Carbon::now();
-
-      if ($validTime >= $now) {
-        $phone = 1;
-      } else {
-        $transaction->delete();
-
-        $log = new Log();
-        $log->account_number = $transaction->account_number;
-        $log->payment_gateway = rand(1, 4);
-        $log->service_type = $transaction->service_type;
-        $log->duration = $transaction->duration;
-        $log->name = $transaction->name;
-
-        $log->save();
-      }
-    }
-
     if ($transaction->service_type == 2) {
       $duration = $transaction->duration;
       $validTime = ($transaction->created_at)->addSecond($duration);
@@ -79,6 +57,26 @@ Route::post('/send_data', function (Request $request) {
       }
     }
 
+    if ($transaction->service_type == 1) {
+      $duration = $transaction->duration;
+      $validTime = ($transaction->created_at)->addSecond($duration);
+      $now = Carbon::now();
+
+      if ($validTime >= $now) {
+        $phone = 1;
+      } else {
+        $transaction->delete();
+
+        $log = new Log();
+        $log->account_number = $transaction->account_number;
+        $log->payment_gateway = rand(1, 4);
+        $log->service_type = $transaction->service_type;
+        $log->duration = $transaction->duration;
+        $log->name = $transaction->name;
+        $log->save();
+      }
+    }
+
     if ($transaction->service_type == 3) {
       $water = 1;
       $transaction->delete();
@@ -94,7 +92,7 @@ Route::post('/send_data', function (Request $request) {
     }
   }
 
-  $indicatorData = [$phone, $ev, $water];
+  $data = $phone.','.$ev.','.$water;
 
-  return response()->json([$indicatorData]);
+  return $data;
 });
