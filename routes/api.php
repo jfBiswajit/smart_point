@@ -46,14 +46,13 @@ Route::post('/send_data', function (Request $request) {
       } else {
         $transaction->delete();
         $log = new Log();
+        $log->payment_gateway = $transaction->payment_gateway;
         $log->account_number = $transaction->account_number;
-        $log->payment_gateway = rand(1, 4);
         $log->service_type = $transaction->service_type;
         $log->duration = $transaction->duration;
         $log->amount = $transaction->amount;
         $log->name = $transaction->name;
         $log->save();
-
       }
     }
 
@@ -68,6 +67,7 @@ Route::post('/send_data', function (Request $request) {
         $transaction->delete();
 
         $log = new Log();
+        $log->payment_gateway = $transaction->payment_gateway;
         $log->account_number = $transaction->account_number;
         $log->payment_gateway = rand(1, 4);
         $log->service_type = $transaction->service_type;
@@ -83,6 +83,7 @@ Route::post('/send_data', function (Request $request) {
       $transaction->delete();
 
       $log = new Log();
+      $log->payment_gateway = $transaction->payment_gateway;
       $log->account_number = $transaction->account_number;
       $log->payment_gateway = rand(1, 4);
       $log->service_type = $transaction->service_type;
@@ -94,7 +95,7 @@ Route::post('/send_data', function (Request $request) {
     }
   }
 
-  $data = $phone.','.$ev.','.$water;
+  $data = $phone . ',' . $ev . ',' . $water;
 
   return $data;
 });

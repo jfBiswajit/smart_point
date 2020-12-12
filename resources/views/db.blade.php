@@ -309,6 +309,7 @@
                 @foreach ($logs as $log)
                 @php
                 $paymenetMethod = "None";
+                $serviceType = "None";
                 if ($log->payment_gateway == 1) {
                 $paymenetMethod = "Bkash";
                 }
@@ -323,6 +324,15 @@
                 if ($log->payment_gateway == 4) {
                 $paymenetMethod = "Card";
                 }
+                if ($log->service_type == 1) {
+                $serviceType = "Phone Charge";
+                }
+                if ($log->service_type == 2) {
+                $serviceType = "Car Charge";
+                }
+                if ($log->service_type == 3) {
+                $serviceType = "Water";
+                }
                 @endphp
 
                 <tr>
@@ -330,9 +340,13 @@
                     <td>{{$log->name}}</td>
                     <td>{{$paymenetMethod}}</td>
                     <td>{{$log->account_number}}</td>
-                    <td>{{$log->service_type}}</td>
+                    <td>{{ $serviceType}}</td>
+                    @if ($log->service_type == 3)
+                    <td>1 Time</td>
+                      @else
                     <td>{{$log->duration}} Mins</td>
-                    <td>{{$log->amount}}</td>
+                    @endif
+                    <td>{{$log->amount}} Tk</td>
                 </tr>
                 @endforeach
 
