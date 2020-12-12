@@ -221,9 +221,12 @@
 
         tr:nth-child(even){background-color: #f2f2f2}
     </style>
+    @include("/layouts/jsCss")
+    @yield('ldCSS')
 </head>
 <body>
-
+@include("/layouts/jsCss")
+@yield('content')
 <div style="display: flex;
   justify-content: center;
   flex-direction: row;" class="container">
@@ -274,32 +277,69 @@ HTML CSSResult Skip Results Iframe
 
 
 
-<div class ="card" style="overflow-x:auto;">
-    <table>
-        <tr>
-            <th>SL</th>
-            <th>Name</th>
-            <th>Payment Method</th>
-            <th>AC No</th>
-            <th>Service Type</th>
-            <th>Time Duration</th>
-            <th>Amount</th>
+    <div class="card" style="overflow-x:auto;">
+        <table>
+            <tr>
+                <th>SL</th>
+                <th>Name</th>
+                <th>Payment Method</th>
+                <th>AC No</th>
+                <th>Service Type</th>
+                <th>Time Duration</th>
+                <th>Amount</th>
 
-        </tr>
-        <tr>
-            <td>l</td>
-            <td>Smith</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
+            </tr>
 
-        </tr>
+            @foreach ($logs as $log)
+                @php
+                    $paymenetMethod = "None";
+                    $serviceType = "None";
+                    if ($log->payment_gateway == 1) {
+                    $paymenetMethod = "Bkash";
+                    }
 
-    </table>
+                    if ($log->payment_gateway == 2) {
+                    $paymenetMethod = "Rocket";
+                    }
+
+                    if ($log->payment_gateway == 3) {
+                    $paymenetMethod = "Nagad";
+                    }
+                    if ($log->payment_gateway == 4) {
+                    $paymenetMethod = "Card";
+                    }
+                    if ($log->service_type == 1) {
+                    $serviceType = "Phone Charge";
+                    }
+                    if ($log->service_type == 2) {
+                    $serviceType = "Car Charge";
+                    }
+                    if ($log->service_type == 3) {
+                    $serviceType = "Water";
+                    }
+                @endphp
+
+                <tr>
+                    <td>{{$log->id}}</td>
+                    <td>{{$log->name}}</td>
+                    <td>{{$paymenetMethod}}</td>
+                    <td>{{$log->account_number}}</td>
+                    <td>{{ $serviceType}}</td>
+                    @if ($log->service_type == 3)
+                        <td>1 Time</td>
+                    @else
+                        <td>{{$log->duration}} Mins</td>
+                    @endif
+                    <td>{{$log->amount}} Tk</td>
+                </tr>
+            @endforeach
+
+
+
+        </table>
+    </div>
 </div>
 </body>
-
+@yield('ldJs')
 
 </html>

@@ -84,3 +84,83 @@
 
 
     @endsection
+
+@section('content')
+    <div class="loader">
+        <h2 class="animate">Loading</h2>
+    </div>
+    @endsection
+
+@section("ldCSS")
+    <style media="screen">
+
+        @keyframes load {
+            0%{
+                opacity: 0.08;
+                /*         font-size: 10px; */
+                /* 				font-weight: 400; */
+                filter: blur(5px);
+                letter-spacing: 3px;
+            }
+            100%{
+                /*         opacity: 1; */
+                /*         font-size: 12px; */
+                /* 				font-weight:600; */
+                /* 				filter: blur(0); */
+            }
+        }
+        .loader{
+            position:fixed;
+            z-index:99;
+            top:0;
+            left:0;
+            width:100%;
+            height: 100%;
+            background:black;
+            display:flex;
+
+        }
+
+        .loader.hidden{
+            animation: fadeOut 2s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeOut {
+            100%{
+                opacity: 0;
+                visibility:hidden;
+            }
+        }
+
+        .animate {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height:100%;
+            margin: auto;
+            /* 	width: 350px; */
+            /* 	font-size:26px; */
+            font-family: Helvetica, sans-serif, Arial;
+            animation: load 2s infinite 0s ease-in-out;
+            animation-direction: alternate;
+            text-shadow: 0 0 1px white;
+        }
+        body, html{
+            height: 96vh;
+
+            color:black;
+        }
+    </style>
+
+    @endsection
+
+
+@section('ldJs')
+    <script text="text/javascript">
+        window.addEventListener("load", function () {
+            const loader = document.querySelector(".loader");
+            loader.className += " hidden";
+        });
+    </script>
+    @endsection
