@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Button;
+use App\Models\Log;
 use App\Models\Test;
 use App\Models\Transaction;
 use Carbon\Carbon;
@@ -23,7 +24,8 @@ Route::get('/', function () {
 });
 
 Route::get('/db', function () {
-  return view('/db');
+  $logs = Log::all();
+  return view('/db', compact('logs'));
 });
 Route::post('/show_data', function () {
   return response()->json(Test::latest()->first());

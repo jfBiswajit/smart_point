@@ -286,16 +286,20 @@ HTML CSSResult Skip Results Iframe
             <th>Amount</th>
 
         </tr>
-        <tr>
-            <td>l</td>
-            <td>Smith</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
 
-        </tr>
+        @foreach ($logs as $log)
+          <tr>
+              <td>{{$log->id}}</td>
+              <td>{{$log->name}}</td>
+              <td>{{$log->payment_gateway}}</td>
+              <td>{{$log->account_number}}</td>
+              <td>{{$log->service_type}}</td>
+              <td>{{$log->duration}} Mins</td>
+              <td>{{$log->amount}}</td>
+          </tr>
+        @endforeach
+
+
 
     </table>
 </div>
