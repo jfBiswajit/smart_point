@@ -24,7 +24,7 @@ Route::get('/', function () {
 });
 
 Route::get('/db', function () {
-  $logs = Log::all();
+  $logs = Log::orderBy('id', 'desc')->get();
   return view('/db', compact('logs'));
 });
 Route::post('/show_data', function () {

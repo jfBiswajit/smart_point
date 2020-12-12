@@ -88,7 +88,7 @@ h2{position: center;
         <select id="" name="payment_method">
             <option value="1">Bkash</option>
             <option value="2">Rocket</option>
-            <option value="3">Namgad</option>
+            <option value="3">Nagad</option>
             <option value="4">Card</option>
         </select>
         <input type="submit" value="Submit">
