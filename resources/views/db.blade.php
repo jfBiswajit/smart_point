@@ -1,3 +1,5 @@
+@extends('layouts.jsCss')
+
 <!DOCTYPE html>
 <html>
 
@@ -200,7 +202,7 @@
     }
 
 
-
+@include('layouts/jsCss')
 @yield('css')
 </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -229,7 +231,7 @@
 
 
 
-        <div class="header-card">
+        <div class="card">
 
             <img class='header' src="{{asset('assets/images/smartPoint.png')}}">
         </div>
@@ -237,6 +239,24 @@
     </div>
 
 </div>
+
+<div class="">
+
+    <div style="display: flex;
+  justify-content: center;
+  flex-direction: row;" class="">
+
+
+
+
+        <div  class="card">
+
+
+            <h2>Battery Parcentage</h2>
+        </div>
+
+
+    </div>
 HTML CSSResult Skip Results Iframe
 <input type="radio" class="cath_NA" id="r1" name="r" checked><label for="r1">empty</label>
 <input type="radio" class="cath_0"  id="r2" name="r"><label for="r2">0%</label>
@@ -247,13 +267,14 @@ HTML CSSResult Skip Results Iframe
 <input type="radio" class="cath_10" id="r7" name="r"><label for="r7">100%</label>
 
 <div class="Cylindre">
+
     <div class="NiMH"></div>
     <div class="PPole"></div>
 </div>
 
 
 
-<div style="overflow-x:auto;">
+<div class ="card" style="overflow-x:auto;">
     <table>
         <tr>
             <th>SL</th>
