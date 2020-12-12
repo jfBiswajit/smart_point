@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4bd652bc-d84a-440a-b199-8f286f4e7fc9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/resources/views/UserLayouts/payment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/UserLayouts/payment.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/UserLayouts/piUI.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/UserLayouts/piUI.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/jsCss.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/jsCss.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,25 +17,6 @@
     <execution>
       <executable />
     </execution>
-  </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/resources/views/UserLayouts/payment.blade.php">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="816">
-                    <caret line="105" selection-start-line="105" selection-end-line="105" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -53,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/db.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="893">
-              <caret line="281" column="35" lean-forward="true" selection-start-line="281" selection-start-column="35" selection-end-line="281" selection-end-column="35" />
+            <state relative-caret-position="833">
+              <caret line="262" column="70" selection-start-line="262" selection-start-column="70" selection-end-line="262" selection-end-column="70" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -76,8 +58,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/jsCss.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="94" column="1" selection-start-line="94" selection-start-column="1" selection-end-line="108" selection-end-column="38" />
+            <state relative-caret-position="321">
+              <caret line="54" column="46" lean-forward="true" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -94,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/UserLayouts/piUI.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="156" column="18" lean-forward="true" selection-start-line="156" selection-start-column="18" selection-end-line="156" selection-end-column="18" />
+            <state relative-caret-position="467">
+              <caret line="218" lean-forward="true" selection-start-line="218" selection-end-line="218" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -116,6 +98,18 @@
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/UserLayouts/payment.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+              <folding>
+                <element signature="n#style#0;n#input#1;n#form#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -161,10 +155,10 @@
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/login/login.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/jsCss" />
-        <option value="$PROJECT_DIR$/resources/views/UserLayouts/piUI.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/db.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/jsCss.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/UserLayouts/piUI.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/UserLayouts/payment.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/jsCss.blade.php" />
       </list>
     </option>
   </component>
@@ -277,11 +271,11 @@
       <path value="$PROJECT_DIR$/vendor/graham-campbell/result-type" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-1928" />
-    <option name="y" value="-89" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1200" />
+    <option name="height" value="646" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -433,15 +427,15 @@
       <updated>1607668916151</updated>
       <workItem from="1607668917361" duration="17509000" />
       <workItem from="1607714531339" duration="7354000" />
-      <workItem from="1607753445542" duration="6819000" />
+      <workItem from="1607753445542" duration="7756000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31682000" />
+    <option name="totallyTimeSpent" value="32619000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-89" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.16577825" />
@@ -610,18 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/db.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="281" column="35" lean-forward="true" selection-start-line="281" selection-start-column="35" selection-end-line="281" selection-end-column="35" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/login/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="773">
@@ -636,10 +618,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/db.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="262" column="70" selection-start-line="262" selection-start-column="70" selection-end-line="262" selection-end-column="70" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/UserLayouts/piUI.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="156" column="18" lean-forward="true" selection-start-line="156" selection-start-column="18" selection-end-line="156" selection-end-column="18" />
+        <state relative-caret-position="467">
+          <caret line="218" lean-forward="true" selection-start-line="218" selection-end-line="218" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -650,17 +644,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/jsCss.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/UserLayouts/payment.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="94" column="1" selection-start-line="94" selection-start-column="1" selection-end-line="108" selection-end-column="38" />
+        <state relative-caret-position="306">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+          <folding>
+            <element signature="n#style#0;n#input#1;n#form#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/UserLayouts/payment.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/jsCss.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="105" selection-start-line="105" selection-end-line="105" />
+        <state relative-caret-position="321">
+          <caret line="54" column="46" lean-forward="true" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
         </state>
       </provider>
     </entry>

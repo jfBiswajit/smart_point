@@ -74,11 +74,11 @@
     <div class="card"><h2>Service : Car Charging</h2></div></div>
 
 <div class="container">
-    <div class="card">
+    <div class="card1">
     <form action="{{ url("/paymentAuth") }}">
         <input type="hidden" name="id" value="{{$id}}">
         <label for="fname">Type Your Name</label>
-        <input class="input100" type="text" id="fname" name="name" placeholder="Your full name.." required>
+        <input style="text-align:left" class="input100" type="text" id="fname" name="name" placeholder="Your full name.." required>
 
 
 

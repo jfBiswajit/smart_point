@@ -145,12 +145,12 @@
  </style>
 
 </head>
-<body>
+
 <body>
 
 
-</div>
-</body>
+
+
 <div style="display: flex;
   justify-content: center;
   flex-direction: row;" class="container">
