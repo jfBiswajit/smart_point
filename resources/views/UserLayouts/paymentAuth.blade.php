@@ -136,6 +136,7 @@
         <form action="{{ url(url("/counter")) }}">
             <label for="fname">Type Account Number</label>
             <input type="text" id="fname" name="account_number" placeholder="Account Number" required>
+            <input type="hidden" name="amount" value="{{$amount}}">
             <input type="submit" value="Proceed To Payment">
         </form>
     </div>
