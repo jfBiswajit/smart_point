@@ -70,7 +70,7 @@
         .card1 {
             box-shadow:10px 10px 8px 5px rgba(0, 0,.3, 0.2);
             padding: 16px;
-            
+
             background-color: white;
             border-radius: 25px;
 
