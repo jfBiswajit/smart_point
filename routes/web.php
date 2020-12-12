@@ -23,7 +23,7 @@ Route::get('/', function () {
 });
 
 Route::get('/db', function () {
-    return view('/db');
+  return view('/db');
 });
 Route::post('/show_data', function () {
   return response()->json(Test::latest()->first());
@@ -33,7 +33,7 @@ Route::get('/piUI', function () {
   return view('/UserLayouts/piUI');
 });
 Route::get('/login', function () {
-    return view('/login/login');
+  return view('/login/login');
 });
 Route::get('/waterCounter', function (Request $request) {
   return view('/UserLayouts/waterCounter');
@@ -80,7 +80,44 @@ Route::get('/paymentAuth', function (Request $request) {
 
   $paymentMethod = $request->payment_method;
 
-  return view('UserLayouts.paymentAuth', compact('paymentMethod'));
+  $duration = $request->duration;
+  $service = $request->id;
+  $amount = 0;
+
+  if ($service == 2) {
+    if ($duration == 5) {
+      $amount = 10;
+    }
+
+    if ($duration == 10) {
+      $amount = 15;
+    }
+
+    if ($duration == 15) {
+      $amount = 20;
+    }
+  }
+
+  if ($service == 1) {
+    if ($duration == 5) {
+      $amount = 1;
+    }
+
+    if ($duration == 10) {
+      $amount = 2;
+    }
+
+    if ($duration == 15) {
+      $amount = 3;
+    }
+  }
+
+  if ($service == 3) {
+    $amount = 1;
+  }
+
+
+  return view('UserLayouts.paymentAuth', compact('paymentMethod', 'amount'));
 });
 
 

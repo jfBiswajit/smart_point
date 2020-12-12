@@ -127,7 +127,7 @@
                 @endphp
                 <img class='image' src="{{asset("assets/images/$img")}}">
             </div>
-            <h1>Total Amount To pay: <span>50 Taka</span></h1>
+            <h1>Total Amount To pay: <span>{{ $amount }} Taka</span></h1>
         </div>
 
 
