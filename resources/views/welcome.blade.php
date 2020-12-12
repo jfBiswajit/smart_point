@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends("layouts.master")
+@section("content")
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-
-<body>
   <a href="{{ url('show_data') }}">Live Data</a>
     <div style="padding: 1rem">
         <button id="red" class="btn" name="red" value="0" style="background: red">10 Mins</button>
@@ -60,6 +52,7 @@
 
                     $('#red_clock').countdown(countdownToTime, function (event) {
                         var totalHours = event.offset.totalDays * 24 + event.offset.hours;
+                        console.log(totalHours);
                         $(this).html(event.strftime(totalHours + ' hr %M min %S sec'));
                         if (event.type === 'finish') {
                             currentBtn.disabled = false;
@@ -186,6 +179,5 @@
             });
         });
     </script>
-</body>
 
-</html>
+@endsection

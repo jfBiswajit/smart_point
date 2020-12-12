@@ -2,6 +2,8 @@
 
 use App\Models\Button;
 use App\Models\Test;
+use App\Models\Transaction;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,12 +22,92 @@ Route::get('/', function () {
   return view('welcome');
 });
 
+Route::get('/db', function () {
+    return view('/db');
+});
 Route::post('/show_data', function () {
   return response()->json(Test::latest()->first());
 });
 
+Route::get('/piUI', function () {
+  return view('/UserLayouts/piUI');
+});
+Route::get('/waterCounter', function (Request $request) {
+  return view('/UserLayouts/waterCounter');
+})->name('water');
+
+Route::get('get_your_water', function (Request $request) {
+  $formData = json_decode($request->session()->get('formData'));
+
+  if ($formData) {
+    $transaction = new Transaction();
+    $transaction->account_number = $formData->account_number;
+    $transaction->payment_gateway = $formData->payment_method;
+    $transaction->service_type = $formData->service_type;
+    $transaction->duration = $formData->duration ?? 0;
+    $transaction->name = $formData->name;
+    $transaction->save();
+    $counter = Carbon::now()->addSecond($transaction->duration);
+    $request->session()->forget('formData');
+    return 'please get your water!';
+  }
+
+  return "Sorry! somethig went wrong!";
+});
+
+
 Route::get('/show_data', function () {
   return view('live');
+});
+
+Route::get('/payment/{id}', function ($id) {
+
+  return view('UserLayouts.payment', compact('id'));
+});
+
+Route::get('/paymentAuth', function (Request $request) {
+  $formData = [
+    'name' => $request->name,
+    'duration' => $request->duration,
+    'payment_method' => $request->payment_method,
+    'service_type' => $request->id
+  ];
+
+  $request->session()->put('formData', json_encode($formData));
+
+  $paymentMethod = $request->payment_method;
+
+  return view('UserLayouts.paymentAuth', compact('paymentMethod'));
+});
+
+
+Route::get('/counter', function (Request $request) {
+  $formData = json_decode($request->session()->get('formData'));
+
+  if ($formData) {
+
+    if ($formData->service_type == 3) {
+      $formData->account_number = $request->account_number;
+      $request->session()->put('formData', json_encode($formData));
+      return redirect()->route('water');
+    }
+
+    $formData->account_number = $request->account_number;
+    $request->session()->put('formData', json_encode($formData));
+    $transaction = new Transaction();
+    $transaction->account_number = $formData->account_number;
+    $transaction->payment_gateway = $formData->payment_method;
+    $transaction->service_type = $formData->service_type;
+    $transaction->duration = $formData->duration ?? 0;
+    $transaction->name = $formData->name;
+    $transaction->save();
+    $counter = Carbon::now()->addSecond($transaction->duration);
+
+    $request->session()->forget('formData');
+    return view('UserLayouts.Counter', compact('counter'));
+  }
+
+  return 'Sorry! Something went worng!';
 });
 
 Route::post('/store_button_data', function (Request $request) {
