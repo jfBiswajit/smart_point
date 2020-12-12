@@ -354,6 +354,49 @@
 
             </table>
         </div>
+    </div>
+HTML CSSResult Skip Results Iframe
+<input type="radio" class="cath_NA" id="r1" name="r" checked><label for="r1">empty</label>
+<input type="radio" class="cath_0"  id="r2" name="r"><label for="r2">0%</label>
+<input type="radio" class="cath_2"  id="r3" name="r"><label for="r3">50%</label>
+<input type="radio" class="cath_4"  id="r4" name="r"><label for="r4">40%</label>
+<input type="radio" class="cath_6"  id="r5" name="r"><label for="r5">60%</label>
+<input type="radio" class="cath_8"  id="r6" name="r"><label for="r6">80%</label>
+<input type="radio" class="cath_10" id="r7" name="r"><label for="r7">100%</label>
+
+<div class="Cylindre">
+
+    <div class="NiMH"></div>
+    <div class="PPole"></div>
+</div>
+
+
+
+<div class ="card" style="overflow-x:auto;">
+    <table>
+        <tr>
+            <th>SL</th>
+            <th>Name</th>
+            <th>Payment Method</th>
+            <th>AC No</th>
+            <th>Service Type</th>
+            <th>Time Duration</th>
+            <th>Amount</th>
+
+        </tr>
+        <tr>
+            <td>l</td>
+            <td>Smith</td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+
+        </tr>
+
+    </table>
+</div>
 </body>
 
 

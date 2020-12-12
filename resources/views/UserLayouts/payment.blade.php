@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html>
-<style>
-    input[type=text], select {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-    .container{
+<head>
 
-        position: center;
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-    }
+    @include('layouts.jsCss')
+    @yield("css")
+    <style>
+        input[type=text], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .container{
+            background: white;
+            position: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+        }
 
-    input[type=submit] {
-        width: 100%;
-        background-color: #4CAF50;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
+        input[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
 
-    input[type=submit]:hover {
-        background-color: #45a049;
-    }
-    .image{
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        .image{
 
-        width:400px;
-        height: 100px;
-        display: inline-block;
-        overflow: hidden;}
-h2{position: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;}
-    div {
-        border-radius: 5px;
-        background-color: #f2f2f2;
-        padding: 20px;
-    }
-</style>
-
-
+            width:400px;
+            height: 100px;
+            display: inline-block;
+            overflow: hidden;}
+        h2{position: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;}
+        div {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+    </style>
+</head>
 <body>
 <div style="display: flex;
   justify-content: center;
-  flex-direction: row;" class="container">
-    <div class="">
+  flex-direction: row;" class="card">
+
 
 
 
@@ -63,26 +66,30 @@ h2{position: center;
             <img class='image' src="{{asset('assets/images/smartPoint.png')}}">
         </div>
 
-    </div>
+
 
 </div>
 
+<div  class="container">
+    <div class="card"><h2>Service : Car Charging</h2></div></div>
+
 <div class="container">
+    <div class="card">
     <form action="{{ url("/paymentAuth") }}">
-    <input type="hidden" name="id" value="{{$id}}">
+        <input type="hidden" name="id" value="{{$id}}">
         <label for="fname">Type Your Name</label>
-        <input type="text" id="fname" name="name" placeholder="Your full name.." required>
+        <input class="input100" type="text" id="fname" name="name" placeholder="Your full name.." required>
 
 
 
-      @if ($id == 1 || $id == 2)
-          <label for="country">Duration</label>
-          <select id="country" name="duration">
-              <option value="5">5 Minuite</option>
-              <option value="10">10 Minuite</option>
-              <option value="15">15 Minuite</option>
-          </select>
-      @endif
+        @if ($id == 1 || $id == 2)
+            <label for="country">Duration</label>
+            <select id="country" name="duration">
+                <option value="5">5 Minuite</option>
+                <option value="10">10 Minuite</option>
+                <option value="15">15 Minuite</option>
+            </select>
+        @endif
 
         <label for="">Select Payment Method</label>
         <select id="" name="payment_method">
@@ -94,6 +101,6 @@ h2{position: center;
         <input type="submit" value="Submit">
     </form>
 </div>
+</div>
 
-</body>
 </html>
