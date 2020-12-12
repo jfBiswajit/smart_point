@@ -71,7 +71,19 @@
 </div>
 
 <div  class="container">
-    <div class="card"><h2>Service : Car Charging</h2></div></div>
+  @php
+    $serviceType = "None";
+    if ($id == 1) {
+      $serviceType = "Mobile Charging";
+    }
+    if ($id == 2) {
+      $serviceType = "Car Charging";
+    }
+    if ($id == 3) {
+      $serviceType = "Water";
+    }
+  @endphp
+    <div class="card"><h2>Service : {{$serviceType}}</h2></div></div>
 
 <div class="container">
     <div class="card">
